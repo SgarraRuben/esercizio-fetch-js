@@ -7,7 +7,11 @@ let skin=document.getElementById("skin");
 
 function getData(){
     let random=Math.floor((Math.random()*61)+1);
-    let api='https://swapi.dev/api/people/' + random;
+    let a=document.getElementById("InputUser").value;
+
+    let c=parseInt(a);
+    let api='https://swapi.dev/api/people/' + c;
+    console.log(random);
 
     fetch(api).then(response => {
     return response.json();
